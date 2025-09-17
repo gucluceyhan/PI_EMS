@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>GES Solar EMS</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header>
+    <h1>{{ plant.name }} – EMS Overview</h1>
+    <p>Plant ID: {{ plant.id }}</p>
+  </header>
+  <main>
+    <section id="devices">
+      <h2>Devices</h2>
+      <div id="device-grid"></div>
+    </section>
+    <section id="measurements">
+      <h2>Latest Measurements</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Timestamp</th>
+            <th>Device</th>
+            <th>Metric</th>
+            <th>Value</th>
+            <th>Unit</th>
+          </tr>
+        </thead>
+        <tbody id="measurement-body"></tbody>
+      </table>
+    </section>
+  </main>
+  <script src="/static/ui.js"></script>
+</body>
+</html>
